@@ -1,0 +1,3 @@
+protection:
+  duration-minutes: 30
+  update-interval-ticks: 20
