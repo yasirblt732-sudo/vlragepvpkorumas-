@@ -14,7 +14,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - run: mvn clean package -q
+      - name: JAR içeriğini kontrol et
+        run: |
+          mvn clean package -q
+          echo "=== JAR içeriği ==="
+          jar tf target/PvPProtection-1.0.0.jar
       - uses: actions/upload-artifact@v4
         with:
           name: PvPProtection-1.0.0
